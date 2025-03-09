@@ -17,13 +17,22 @@ html {
 }
 
 .header {
-  padding: 8rem 0;
+  padding: 8rem 2rem;
   background-image: url("assets/desktop/image-hero-left.png"),
     url("assets/desktop/image-hero-right.png");
   background-color: #fafafa;
   background-repeat: no-repeat, no-repeat;
   background-position-x: 0%, 100%;
   background-position-y: 50%, 50%;
+}
+
+@media screen and (max-width: 23.4375em) {
+  .header {
+    background-image: url("assets/tablet/image-hero.png");
+    background-size: 110%;
+    background-position-y: 20%;
+    background-position-x: center;
+  }
 }
 
 @media screen and (min-width: 120em) {
@@ -38,6 +47,23 @@ html {
   margin-bottom: 8rem;
 }
 
+@media screen and (max-width: 72.4375em) {
+  .header {
+    background-image: url("assets/tablet/image-hero.png");
+    background-size: 70%;
+    background-position-y: 20%;
+    background-position-x: center;
+  }
+  .navigation {
+    margin-bottom: 30rem;
+  }
+}
+
+@media screen and (max-width: 23.4375em) {
+  .navigation {
+    margin-bottom: 15rem;
+  }
+}
 .container {
   max-width: 112rem;
   margin: auto;
@@ -135,7 +161,15 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3.2rem;
-  padding: 6.4rem 0;
+  padding: 6.4rem 2rem;
+}
+
+@media screen and (max-width: 37.5em) {
+  .img-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .img-gallery img {
@@ -146,6 +180,7 @@ html {
 .text-content {
   max-width: 54.4rem;
   margin: auto;
+  padding: 0 2rem;
 }
 
 .preheading-text {
@@ -173,6 +208,7 @@ html {
   padding: 11rem 0;
   position: relative;
   margin-top: -4rem;
+  padding: 0 2rem;
 }
 
 .footer::after {
@@ -188,9 +224,10 @@ html {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
   z-index: 5;
   position: relative;
+  align-items: center;
+  gap: 3.2rem;
 }
 
 .footer-heading {
@@ -204,4 +241,43 @@ html {
   font-size: 1.8rem;
   font-weight: 600;
   color: #fafafa;
+  justify-self: center;
+}
+
+.footer-grid .secondary-cta {
+  justify-self: end;
+}
+
+@media screen and (max-width: 46.5em) {
+  .footer-grid {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .footer-grid .secondary-cta {
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .main-heading {
+    font-size: 4.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .subheading-text {
+    margin-bottom: 2.4rem;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    background-image: url(assets/tablet/image-footer.jpg);
+    background-size: cover;
+  }
 }
