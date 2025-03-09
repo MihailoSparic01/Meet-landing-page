@@ -208,7 +208,7 @@ html {
   padding: 11rem 0;
   position: relative;
   margin-top: -4rem;
-  padding: 0 2rem;
+  padding: 12rem 2rem;
 }
 
 .footer::after {
@@ -258,6 +258,10 @@ html {
 
   .footer-grid .secondary-cta {
     justify-self: center;
+  }
+
+  .footer {
+    padding: 6.4rem 2rem;
   }
 }
 
